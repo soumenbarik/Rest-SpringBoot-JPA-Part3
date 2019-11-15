@@ -13,7 +13,7 @@ public class Policy {
    
 	@Id
 	@Column(name = "policy_id", nullable = false)
-	private String policyNumber;
+	private String policyId;
 	
 	@Column(name = "insurer_name", nullable = false)
 	private String insurerName;
@@ -27,11 +27,12 @@ public class Policy {
 	@Column(name = "nos_dependent", nullable = false)
 	private String nosOfDependent;
 	
-	public String getPolicyNumber() {
-		return policyNumber;
+
+	public String getPolicyId() {
+		return policyId;
 	}
-	public void setPolicyNumber(String policyNumber) {
-		this.policyNumber = policyNumber;
+	public void setPolicyId(String policyId) {
+		this.policyId = policyId;
 	}
 	public String getInsurerName() {
 		return insurerName;
@@ -58,6 +59,4 @@ public class Policy {
 		this.nosOfDependent = nosOfDependent;
 	}
 	
-	
-
 }
