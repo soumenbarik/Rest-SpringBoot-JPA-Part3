@@ -12,4 +12,4 @@ eureka:
 #Setting logging levels
 logging:
   level:
-    org.springframework.web: WARN
+    org.springframework.web: DEBUG
