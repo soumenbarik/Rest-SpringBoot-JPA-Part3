@@ -13,4 +13,6 @@ spring:
    hibernate.show_sql: true
   hibernate:
     ddl-auto: none
+server:
+ port: 8089    
  
