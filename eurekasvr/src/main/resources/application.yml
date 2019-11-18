@@ -1,0 +1,15 @@
+#Default port is 8761
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 30
+
+#Setting logging levels
+logging:
+  level:
+    org.springframework.web: WARN
