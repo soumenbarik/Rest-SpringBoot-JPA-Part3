@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "7956cee2-5e9a-4896-9f20-577d8a074198",
+		"name": "Rest-SpringBoot-JPA-Part3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET EMPLOYEE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/employee/E-234566",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"employee",
+						"E-234566"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update EMPLOYEE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/employee/E-234566",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"employee",
+						"E-234566"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Delete EMPLOYEE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/employee/E-234566/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"employee",
+						"E-234566",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET EMPLOYEE with PolicyID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/employee/E-234566/policyId/P-235678",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"employee",
+						"E-234566",
+						"policyId",
+						"P-235678"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Policy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8089/v1/policyId/P-235678",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"v1",
+						"policyId",
+						"P-235678"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a4e8eb04-b1f0-45b1-bab2-81a329f14b2c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1e7d9802-baf8-4102-96a3-c6623a81e65f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
