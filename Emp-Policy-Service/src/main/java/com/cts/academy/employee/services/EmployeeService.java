@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class EmployeeService {
-	
 	@Autowired
 	private EmployeeRepository employeeRepo;
 	
@@ -31,7 +30,6 @@ public class EmployeeService {
 	}
 	
 	public void saveEmployeeDetails(Employee emp) {
-		
 		employeeRepo.save(emp);
 	}
 
