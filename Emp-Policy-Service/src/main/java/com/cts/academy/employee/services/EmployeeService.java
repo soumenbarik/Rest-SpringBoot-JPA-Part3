@@ -11,18 +11,16 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class EmployeeService {
-
+	
 	@Autowired
 	private EmployeeRepository employeeRepo;
-
+	
 	@Autowired
 	private PolicyRestClient policyClient;
 
-	public Employee fetchEmployee(String employeeId, String policyId) throws InterruptedException {
+	public Employee getEmployee(String employeeId) throws InterruptedException {
 		Employee employee = employeeRepo.findByEmployeeId(employeeId);
-
-		Policy polDetails = getPolicyDetails(policyId);
-
+		Policy polDetails = getPolicyDetails(employee.getPolicyId());
 		return employee.withEnsurer(polDetails.getInsurerName()).withContactEmail(polDetails.getContactEmail())
 				.withInsuranceStartDate(polDetails.getInsuranceStartDate())
 				.withNosOfDependent(polDetails.getNosOfDependent()).withPolicyID(polDetails.getPolicyNumber());
@@ -31,14 +29,9 @@ public class EmployeeService {
 	private Policy getPolicyDetails(String policyId) {
 		return policyClient.getPolicyDetils(policyId);
 	}
-
-	public Employee getEmployee(String employeeID) {
-
-		return employeeRepo.findByEmployeeId(employeeID);
-	}
-
+	
 	public void saveEmployeeDetails(Employee emp) {
-
+		
 		employeeRepo.save(emp);
 	}
 
@@ -49,5 +42,4 @@ public class EmployeeService {
 	public void deleteLEmployee(String empID) {
 		employeeRepo.deleteById(empID);
 	}
-
 }
