@@ -20,19 +20,10 @@ public class EmployeeServiceController {
 	private EmployeeService empService;
 
 	@GetMapping(value = "")
-	public Employee getEmployee(@PathVariable("employeeId") String employeeId) {
+	public Employee getEmployee(@PathVariable("employeeId") String employeeId) throws InterruptedException {
 
 		return empService.getEmployee(employeeId);
 	}
-
-	@RequestMapping(value = "/policyId/{policyId}", method = RequestMethod.GET)
-	public Employee getEmployeePolicyDetail(@PathVariable("employeeId") String employeeId,
-
-			@PathVariable("policyId") String policyId) throws InterruptedException {
-
-		return empService.fetchEmployee(employeeId, policyId);
-	}
-
 	@RequestMapping(value = "", method = RequestMethod.PUT)
 	public void updateLicenses(@PathVariable("employeeId") String employeeId, @RequestBody Employee employee) {
 		empService.updateEmployee(employee);
